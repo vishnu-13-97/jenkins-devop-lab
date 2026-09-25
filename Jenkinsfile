@@ -17,5 +17,12 @@ pipeline {
             }
         }
 
+        stage('Docker Build') {
+            steps {
+                echo 'Building Docker image...'
+                sh 'docker build -t jenkins-devops-lab:latest .'
+            }
+        }
+
     }
 }
